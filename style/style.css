@@ -1,13 +1,16 @@
 :root {
+    /* global */
     --transitionTime: 0.3s;
-    --colorWhite: rgb(238, 238, 238);
-    --colorBlack: black;
+    --colorWhite: rgb(255, 255, 255);
+    --colorBlack: rgb(0, 0, 0);
+    --colorHighlightBg: #FF69B4;
+    --colorHighlightBgFaded: rgba(255, 29, 142, 0.555);
+    /* light */
     --colorBg: #f9f9f9;
     --colorFg: #4c4f59;
     --colorFgFaded: #4c4f59;
     --colorFgFadedMore: #a0a3ab;
-    --colorHighlightBg: #FF69B4;
-    --colorHighlightBgFaded: rgba(255, 29, 142, 0.555);
+    /* dark */
     --colorBgDark: #333335;
     --colorFgDark: #d1d1d1;
     --colorFgDarkFaded: #e3e3e363;
@@ -18,12 +21,14 @@ span#highlight {color: var(--colorHighlightBg);}
     margin: 0;
     padding: 0;
 }
-a,.container,.card-overlay,.palettePopup,label {transition-duration: var(--transitionTime);}
+a,.container,.card-overlay,.palettePopup,label {
+    transition-duration: var(--transitionTime);
+}
 body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 20pt;
     color: var(--colorFg);
-    background: var(--colorBg);
+    background: var(--colorWhite);
 }
 a {
     text-decoration: none;
@@ -36,31 +41,37 @@ ul {list-style-type: none;}
     color: var(--colorFg);
     background: var(--colorBg);
 }
-/* #socials {} */
-.container#socials {
+.container {
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    background: url('tiamarth-shadow.svg') no-repeat scroll;
+    /* background: url('tiamarth-shadow.svg') no-repeat scroll;
     background-position: calc(100% * 2 / 4) calc(100% * 2 / 2.2);
-    background-size: 40em;
+    background-size: 40em; */
 }
-.container#socials h1 {
+.header {
+    padding: 1em 1em 1em 8em;
+    background-color: var(--colorWhite);
+}
+img.banner {height: 3em;}
+.container h1 {
     padding-top: 3%;
     padding-left: 10%;
 }
-.socialscard {
+/* #socials {} */
+/* .socialscard {
     position: relative;
     top: 3em;
-    width: 400px;
+    width: 350px;
     float: left;
-    padding-left: 22%;
-    padding-bottom: 3em;
-}
-.socialscard h2 {
+    margin: auto auto 3em 22%;
+    padding: 2em;
+    background-color: var(--colorBg);
+} */
+/* .socialscard h2 {
     font-size: 25pt;
     padding-bottom: 1em;
-}
+} */
 /* .container#socials a {} */
 /* .bottom {
     text-align: center;
@@ -71,15 +82,16 @@ ul {list-style-type: none;}
 .bottom,.bottom a {color: var(--colorFgFadedMore);}
 .bottom a:hover {color: var(--colorFgFaded);} */
 /* theme switcher */
+/* this is the button you click to toggle dark mode */
 label {
     height: 0;
     position: absolute;
     top: 10px;
     right: 10px;
-    color: var(--colorFgFadedMore);
+    color: var(--colorFgFaded);
 }
 label:hover {
-    color: var(--colorFg);
+    color: var(--colorFgFadedMore);
     cursor: pointer;
 }
 label:after {content: 'Turn off the lights'}
@@ -89,30 +101,26 @@ input#themer {
     left: -9999px;
 }
 /* dark theme */
+/* these are the styles for dark mode */
 input#themer:checked + label {color: var(--colorFgDarkFaded);}
 input#themer:checked + label:after {content: 'Turn on the lights'}
 input#themer:checked + label:hover {color: var(--colorFgDarkFadedMore);}
-input#themer:checked ~ .container#socials {
+input#themer:checked ~ .container {
     color: var(--colorFgDark);
-    background: var(--colorBgDark) url('tiamarth-shadow.svg') no-repeat scroll;
-    background-position: calc(100% * 2 / 4) calc(100% * 2 / 2.2);
-    background-size: 40em;
+    background: var(--colorBlack);
 }
-input#themer:checked ~ .container#socials blockquote,
-input#themer:checked ~ .container#socials blockquote a {
-    color: var(--colorFgDarkFadedMore);
-}
-input#themer:checked ~ .container#socials blockquote a:hover {color: var(--colorFgDarkFaded);}
-input#themer:checked ~ .container#socials .cards#dark,
-input#themer:checked ~ .container#socials .palette#dark {
+input#themer:checked ~ .container .cards#dark,
+input#themer:checked ~ .container .palette#dark {
     display: none;
 }
-input#themer:checked ~ .container#socials .cards#Dark,
-input#themer:checked ~ .container#socials .palette#Dark {
+input#themer:checked ~ .container .cards#Dark,
+input#themer:checked ~ .container .palette#Dark {
     display: block;
 }
-input#themer:checked ~ .container#socials .bottom,
-input#themer:checked ~ .container#socials .bottom a {
+input#themer:checked ~ .container .bottom,
+input#themer:checked ~ .container .bottom a {
     color: var(--colorFgDarkFadedMore);
 }
-input#themer:checked ~ .container#socials .bottom a:hover {color: var(--colorFgDarkFaded);}
+input#themer:checked ~ .container .bottom a:hover {
+    color: var(--colorFgDarkFaded);
+}
