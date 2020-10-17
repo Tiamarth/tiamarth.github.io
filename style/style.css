@@ -86,41 +86,30 @@ img.banner {height: 3em;}
 label {
     height: 0;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    color: var(--colorFgFaded);
+    top: 1.5em;
+    right: 2em;
+    width: 2em !important;
+    height: 2em !important;
+    background: url('light-bulb.svg');
 }
 label:hover {
     color: var(--colorFgFadedMore);
     cursor: pointer;
 }
-label:after {content: 'Turn off the lights'}
 input#themer {
     position: absolute;
     top: -9999px;
     left: -9999px;
 }
+/* <div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */
 /* dark theme */
 /* these are the styles for dark mode */
-input#themer:checked + label {color: var(--colorFgDarkFaded);}
-input#themer:checked + label:after {content: 'Turn on the lights'}
+input#themer:checked + label {filter: invert();}
 input#themer:checked + label:hover {color: var(--colorFgDarkFadedMore);}
 input#themer:checked ~ .container {
     color: var(--colorFgDark);
     background: var(--colorBlack);
 }
-input#themer:checked ~ .container .cards#dark,
-input#themer:checked ~ .container .palette#dark {
-    display: none;
-}
-input#themer:checked ~ .container .cards#Dark,
-input#themer:checked ~ .container .palette#Dark {
-    display: block;
-}
-input#themer:checked ~ .container .bottom,
-input#themer:checked ~ .container .bottom a {
-    color: var(--colorFgDarkFadedMore);
-}
-input#themer:checked ~ .container .bottom a:hover {
-    color: var(--colorFgDarkFaded);
+input#themer:checked ~ .container .header {
+    background: var(--colorBgDark);
 }
