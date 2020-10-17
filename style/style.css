@@ -41,8 +41,7 @@ ul {list-style-type: none;}
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    color: var(--colorWhite);
-    background: var(--colorBlack) url('tiamarth-shadow.svg') no-repeat scroll;
+    background: url('tiamarth-shadow.svg') no-repeat scroll;
     background-position: calc(100% * 2 / 4) calc(100% * 2 / 2.2);
     background-size: 40em;
 }
@@ -72,7 +71,7 @@ ul {list-style-type: none;}
 .bottom,.bottom a {color: var(--colorFgFadedMore);}
 .bottom a:hover {color: var(--colorFgFaded);} */
 /* theme switcher */
-/* label {
+label {
     height: 0;
     position: absolute;
     top: 10px;
@@ -88,30 +87,32 @@ input#themer {
     position: absolute;
     top: -9999px;
     left: -9999px;
-} */
+}
 /* dark theme */
-/* input#themer:checked + label {color: var(--colorFgDarkFaded);}
+input#themer:checked + label {color: var(--colorFgDarkFaded);}
 input#themer:checked + label:after {content: 'Turn on the lights'}
 input#themer:checked + label:hover {color: var(--colorFgDarkFadedMore);}
-input#themer:checked ~ .container {
+input#themer:checked ~ .container#socials {
     color: var(--colorFgDark);
-    background: var(--colorBgDark);
+    background: var(--colorBgDark) url('tiamarth-shadow.svg') no-repeat scroll;
+    background-position: calc(100% * 2 / 4) calc(100% * 2 / 2.2);
+    background-size: 40em;
 }
-input#themer:checked ~ .container blockquote,
-input#themer:checked ~ .container blockquote a {
+input#themer:checked ~ .container#socials blockquote,
+input#themer:checked ~ .container#socials blockquote a {
     color: var(--colorFgDarkFadedMore);
 }
-input#themer:checked ~ .container blockquote a:hover {color: var(--colorFgDarkFaded);}
-input#themer:checked ~ .container .cards#dark,
-input#themer:checked ~ .container .palette#dark {
+input#themer:checked ~ .container#socials blockquote a:hover {color: var(--colorFgDarkFaded);}
+input#themer:checked ~ .container#socials .cards#dark,
+input#themer:checked ~ .container#socials .palette#dark {
     display: none;
 }
-input#themer:checked ~ .container .cards#Dark,
-input#themer:checked ~ .container .palette#Dark {
+input#themer:checked ~ .container#socials .cards#Dark,
+input#themer:checked ~ .container#socials .palette#Dark {
     display: block;
 }
-input#themer:checked ~ .container .bottom,
-input#themer:checked ~ .container .bottom a {
+input#themer:checked ~ .container#socials .bottom,
+input#themer:checked ~ .container#socials .bottom a {
     color: var(--colorFgDarkFadedMore);
 }
-input#themer:checked ~ .container .bottom a:hover {color: var(--colorFgDarkFaded);} */
+input#themer:checked ~ .container#socials .bottom a:hover {color: var(--colorFgDarkFaded);}
