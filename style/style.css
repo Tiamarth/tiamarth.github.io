@@ -68,7 +68,6 @@ img.banner {height: 3em;}
     color: white;
     background: var(--colorHighlightBg);
     padding: 0.3em 2em 0.5em 2em;
-    box-shadow: inset 0 0 5px #6d6d6d;
 }
 .container h1 {
     padding-top: 3%;
