@@ -21,7 +21,7 @@ span#highlight {color: var(--colorHighlightBg);}
     margin: 0;
     padding: 0;
 }
-a,.container,.card-overlay,.palettePopup,label {
+a,li,.container,.card-overlay,.palettePopup,label {
     transition-duration: var(--transitionTime);
 }
 body {
@@ -54,6 +54,25 @@ ul {list-style-type: none;}
     background-color: var(--colorWhite);
 }
 img.banner {height: 3em;}
+.nav {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100vw;
+    text-align: center;
+    background: var(--colorFgDarkFaded);
+    line-height: 2em;
+}
+.nav ul li {
+    margin-left: -8px;
+    display: inline;
+    padding: 0.4em;
+}
+.nav ul li a {padding: 0.4em 0;}
+.nav ul li:hover > a {
+    color: white;
+    background: var(--colorHighlightBg);
+    padding: 0.4em 2em;
+}
 .container h1 {
     padding-top: 3%;
     padding-left: 10%;
