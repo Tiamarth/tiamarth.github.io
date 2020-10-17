@@ -42,8 +42,9 @@ ul {list-style-type: none;}
     max-width: 100%;
     height: 100vh;
     color: var(--colorWhite);
-    background: var(--colorBlack) url('landing-bg.jpg') no-repeat scroll center;
-    background-size: cover;
+    background: var(--colorBlack) url('tiamarth-shadow.svg') no-repeat scroll;
+    background-position: calc(100% * 2 / 4) calc(100% * 2 / 2.2);
+    background-size: 40em;
 }
 .container#socials h1 {
     padding-top: 3%;
