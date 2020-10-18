@@ -51,7 +51,7 @@ p {margin: 1em auto;}
 }
 .header {
     margin: 0;
-    padding: 1em 1em 1em 12em;
+    padding: 1em;
     background-color: var(--colorWhite);
 }
 img.banner {height: 3em;}
