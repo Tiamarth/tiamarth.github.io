@@ -5,11 +5,13 @@
     --colorBlack: #000;
     --colorHighlightBg: #FF69B4;
     --colorHighlightBgFaded: #ff1d8e8e;
+    --colorHighlightBgFadedMore: #ff4ba575;
     /* light */
     --colorBg: #f9f9f9;
     --colorFg: #6c7181;
     --colorFgFaded: #777c8b;
     --colorFgFadedMore: #aeb0b8;
+    --colorFgFadedMost: #aeb0b894;
     /* dark */
     --colorBgDark: #333335;
     --colorFgDark: #d1d1d1;
@@ -73,37 +75,40 @@ img.banner {height: 3em;}
     padding-top: 3%;
     padding-left: 10%;
 }
-.card {
-    color: var(--colorFg);
-    background-color: var(--colorWhite);
-}
-.card#about {
-    margin: 0 20em;
-    padding: 3em;
-}
 .deck {
     /* background: red; */
     margin: 0 10em;
 }
-.card#socials {
+.card {
+    color: var(--colorFg);
+    background-color: var(--colorWhite);
+}
+.card#project {
+    width: 15em;
+    margin: 2em auto;
+    padding: 1em 2em;
+}
+.card#about {
+    width: 50%;
+    margin: 0 auto;
+    padding: 3em;
+}
+.card#about p#credits {
+    color: var(--colorFgFadedMost);
+    font-style: italic;
+    font-size: 13pt;
+}
+.card#about p#credits a {color: var(--colorHighlightBgFadedMore);}
+.card#social {
     float: left;
-    margin: 2em;
     width: 15em;
     height: 10em;
+    margin: 2em;
     padding: 2em;
     vertical-align: middle;
 }
 #end {clear: both;}
-/* .bottom {
-    text-align: center;
-    * width: 100vh; *
-    margin-top: 1%;
-}
-.bottom li {display: inline;}
-.bottom,.bottom a {color: var(--colorFgFadedMore);}
-.bottom a:hover {color: var(--colorFgFaded);} */
 /* theme switcher */
-/* this is the button you click to toggle dark mode */
 label {
     height: 0;
     position: absolute;
@@ -122,9 +127,7 @@ input#themer {
     top: -9999px;
     left: -9999px;
 }
-/* <div>Icons made by <a href='https://www.flaticon.com/authors/vectors-market' title='Vectors Market'>Vectors Market</a> from <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a></div> */
 /* dark theme */
-/* these are the styles for dark mode */
 input#themer:checked + label {filter: invert();}
 input#themer:checked + label:hover {color: var(--colorFgDarkFadedMore);}
 input#themer:checked ~ .container {
