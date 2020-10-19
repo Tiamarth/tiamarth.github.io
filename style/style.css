@@ -40,14 +40,13 @@ a:hover {color: var(--colorHighlightBgFaded);}
 ul {list-style-type: none;}
 p {margin: 1em auto;}
 .container {
-    color: var(--colorFg);
-    background: var(--colorBg);
-}
-.container {
+    overflow-x: hidden;
     width: 100vw;
     max-width: 100%;
     height: 100%;
     min-height: 100vh;
+    color: var(--colorFg);
+    background: var(--colorBg);
 }
 .header {
     margin: 0;
@@ -69,25 +68,21 @@ img.banner {height: 3em;}
 .nav ul li:hover > a {
     color: white;
     background: var(--colorHighlightBg);
-    padding: 0.3em 2em 0.5em 2em;
+    padding: 0.4em 2em;
 }
 .container h1 {
     padding-top: 3%;
     padding-left: 10%;
 }
-.deck {
-    /* background: red; */
-    margin: 0 10em;
+.deck {margin: 0 auto;}
+.deck#contact {
+    display: table;
 }
 .card {
     color: var(--colorFg);
     background-color: var(--colorWhite);
 }
-.card#project {
-    width: 15em;
-    margin: 2em auto;
-    padding: 1em 2em;
-}
+.card#project,.card#social {box-shadow: 0 0 2px var(--colorFgDark);}
 .card#about {
     width: 50%;
     margin: 0 auto;
@@ -99,9 +94,13 @@ img.banner {height: 3em;}
     font-size: 13pt;
 }
 .card#about p#credits a {color: var(--colorHighlightBgFadedMore);}
+.card#project,
 .card#social {
     float: left;
-    width: 15em;
+    position: relative;
+    display: table-cell;
+    min-width: 9em;
+    max-width: 13em;
     height: 10em;
     margin: 2em;
     padding: 2em;
@@ -114,8 +113,8 @@ label {
     position: absolute;
     top: 1.5em;
     right: 2em;
-    width: 2em !important;
-    height: 2em !important;
+    width: 2em;
+    height: 2em;
     background: url('light-bulb.svg');
 }
 label:hover {
