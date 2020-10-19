@@ -1,8 +1,9 @@
 :root {
     /* global */
-    --transitionTime: 0.3s;
+    --transitionTime: 0.2s;
     --colorWhite: #fff;
     --colorBlack: #000;
+    --colorNavy: #232939;
     --colorHighlightBg: #FF69B4;
     --colorHighlightBgFaded: #ff1d8e8e;
     --colorHighlightBgFadedMore: #ff4ba575;
@@ -49,11 +50,21 @@ p {margin: 1em auto;}
     background: var(--colorBg);
 }
 .header {
+    height: 10em;
     margin: 0;
     padding: 1em;
-    background-color: var(--colorWhite);
+    background: var(--colorNavy) url('header-bg.jpg') 100% -7em no-repeat;
+    background-size: 50%;
+/*     background-blend-mode: ; */
 }
-img.banner {height: 3em;}
+.header img.banner {height: 8em;}
+.header img.avatar {
+    position: absolute;
+    top: 2em;
+    right: calc(100vw - 57vw);
+    height: 8em;
+    border-radius: 100%;
+}
 .nav {
     text-align: center;
     background: var(--colorFgDarkFaded);
@@ -136,7 +147,4 @@ input#themer:checked ~ .container {
 input#themer:checked ~ .container .card {
     color: var(--colorFgDark);
     background: var(--colorBgDark);
-}
-input#themer:checked ~ .container .header {
-    background: var(--colorBlack);
 }
