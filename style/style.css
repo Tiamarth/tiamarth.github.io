@@ -21,7 +21,7 @@
 }
 @font-face {
     font-family: Neverwinter;
-    src: url(fonts/Neverwinter.otf);
+    src: url('fonts/Neverwinter.otf');
 }
 span#highlight {color: var(--colorHighlightBg);}
 * {
